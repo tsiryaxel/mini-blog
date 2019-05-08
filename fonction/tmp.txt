@@ -1,0 +1,59 @@
+<?php
+
+include("connex.php");
+
+function create(){		
+	try{
+	 
+		$db = new DB();
+		$conn = $db->Open();
+		if($conn){
+			// $query = "insert into rubrique VALUES ( null ,'Science' , 'science-logo.jpg' , 'Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.' )";			
+			// $query = "insert into rubrique VALUES ( null ,'Sport' , 'sport-logo.jpg' , 'Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.' )";			
+			// $query = "insert into rubrique VALUES ( null ,'Politique' , 'politique-logo.jpg' , 'Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.' )";			
+			// $query = "insert into rubrique VALUES ( null ,'Politique' , 'politique-logo.jpg' , 'Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.' )";			
+			echo $query."<br><br><br>";
+			$conn->query($query);
+			// $db->Close();
+		}
+		else{
+			echo $conn;
+		}
+		
+	}
+	catch(PDOException $ex){
+		echo $ex->getMessage();
+	}
+}
+
+function read(){
+	try{
+	 
+		$db = new DB();
+		$conn = $db->Open();
+		if($conn){
+			$query = "SELECT * FROM rubrique";
+			$result  = $conn->query($query);
+			foreach ($result as $row) {
+				echo $row['nom'] . "<br>";
+				echo $row['image'] . "<br>";
+				echo $row['detail'] . "<br>";
+			}
+			// $db->Close();
+			return $result ;
+		}
+		else{
+			echo $conn;
+		}
+	}
+	catch(PDOException $ex){
+		echo $ex->getMessage();
+	}
+	
+}
+
+
+
+
+
+?>

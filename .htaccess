@@ -1,0 +1,20 @@
+﻿RewriteEngine On
+
+#RewriteBase /Rewritting
+
+#Front
+RewriteRule ^home$ index.php [L]
+RewriteRule ^req$ fonction/requet.php [L]
+RewriteRule rubrique-([A-Za-z-]+)$ index.php?page=rubrique&ref=$1 [L]
+#RewriteRule rubrique-([A-Za-z-]+)$ index.php?page=post&ref=$1 [L]
+
+
+
+#Back
+RewriteRule ^dash$ index2.php [L]
+RewriteRule ^auth$ fonction/auth.php [L]
+RewriteRule ^deconnexion$ fonction/auth.php?dec=ok [L]
+RewriteRule formulaire-([A-Za-z-]+)$ index2.php?page=formualaire&ref=$1 [L]
+RewriteRule list-([A-Za-z-]+)$ index2.php?page=list&ref=ls$1 [L]
+RewriteRule add-([A-Za-z-]+)$ fonction/insert.php?add=$1 [L]
+RewriteRule del-([A-Za-z-]+)-([0-9]+)$ fonction/delete.php?tab=$1&id=$2& [L]
