@@ -1,5 +1,5 @@
 <?php
-	
+
 	include("fonction/connex.php");
 	include("fonction/crud.php");
 	include("fonction/requet.php");
@@ -20,11 +20,10 @@ $rubrique = readtab("rubrique");
     <!--<![endif]-->
     <head>
         <!-- Title -->
-        <title>Lifestyle - Professional Bootstrap Template</title>
+        <title>MadaVao2</title>
         <!-- Meta -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="MadaVao2 est une blog qui partage les actualités national">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <!-- Favicon -->
         <link href="favicon.ico" rel="shortcut icon">
@@ -66,7 +65,7 @@ $rubrique = readtab("rubrique");
 					// include("front/page/rubrique.php");
 					// include("front/page/post.php");
 					
-					if( isset( $_GET["page"] ) ){
+					if( isset( $_GET["page"] )  &&  $_GET["page"] != "home" ){
 						include("front/page/".$_GET["page"].".php");
 					} else {
 						include("front/page/home.php");

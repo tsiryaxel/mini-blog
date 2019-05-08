@@ -16,6 +16,8 @@ create table admine(
 	PRIMARY KEY (id)
 );
 
+--insert into admine values( null ,"Andriamahafaly Tsiry" , "80d7288c2c80c67b8b255a778fd0191ced31666a" , "tsiryandriamahafaly@gmail.com" ) ;
+
 create table post(
 	id int NOT NULL AUTO_INCREMENT,
     idadmine int NOT NULL,

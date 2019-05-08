@@ -12,9 +12,13 @@ class DB
 		
 		// Configuration du base de donner
 	
-		$config['host'] = "mysql:dbname=blog; host=localhost";
-		$config['user'] = "root" ;
-		$config['pass'] = "root" ;
+		// $config['host'] = "mysql:dbname=blog; host=localhost";
+		// $config['user'] = "root" ;
+		// $config['pass'] = "root" ;
+		
+		$config['host'] = "mysql:dbname=sql7290320; host=sql7.freemysqlhosting.net";
+		$config['user'] = "sql7290320" ;
+		$config['pass'] = "aPb2wuebRw" ;
 		
         try {
             $options  = array(PDO::ATTR_ERRMODE =>      PDO::ERRMODE_EXCEPTION,

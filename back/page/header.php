@@ -2,10 +2,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="MadaVao2 Admin est le site pour gere le blog MadaVao2 Admin">
 
-    <title>Startmin - Bootstrap Admin Theme</title>
+    <title>MadaVao2 Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="back/assets/css/bootstrap.min.css" rel="stylesheet">

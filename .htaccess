@@ -3,8 +3,8 @@
 #RewriteBase /Rewritting
 
 #Front
-RewriteRule ^home$ index.php [L]
-RewriteRule ^req$ fonction/requet.php [L]
+RewriteRule ^home$ index.php?page=home [L]
+#RewriteRule ^req$ fonction/requet.php [L]
 RewriteRule rubrique-([A-Za-z-]+)$ index.php?page=rubrique&ref=$1 [L]
 #RewriteRule rubrique-([A-Za-z-]+)$ index.php?page=post&ref=$1 [L]
 
